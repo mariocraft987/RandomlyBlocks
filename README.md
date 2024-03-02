@@ -6,14 +6,14 @@ My first submitted [PenguinMod](https://penguinmod.com) extensions called Random
 <img src="https://github.com/mariocraft987/RandomlyBlocks/assets/154646419/c55768de-42e7-42eb-938a-1b0335602ade" width="330">
 <br/>
 Version 1.5<br/>
-Last updated Feb, 28 2024
+Last updated March, 2 2024
 |Block        |result|
 |--------------|------|
 |`Alert [Hello, World]`|Alerts the user|
 |`Change Website title to [Randomly Blocks]`|Changes the website title|
 |`Add [Penguin] to console log`|Adds a string to the console log|
 |`Add [Banana] to console error`|Adds a string to the error log|
-|`<Do I exist?>`|Returns if the boolean exists|
+|`<True?>`|Returns true|
 |`<Do Dinosoars exist?>`|Returns if the dinosoars still exists|
 |`<"Ok" button pressed on alert [popup]?>`|Sends an alert with a Ok/Cancel and returns is "Ok" is pressed|
 |`(Input of [What's your username?] with the default of [mariocraft987])`|Sends an alert with an input and returns the user's input|
