@@ -14,26 +14,44 @@ class superEquations {
           {
             opcode: 'normalEquation',
             blockType: Scratch.BlockType.REPORTER,
-            text: '[1] [EQUATION] [2]',
+            text: '[one] [EQUATION] [two]',
             disableMonitor: true,
             arguments: {
-              1: {
+              one: {
                 type: Scratch.ArgumentType.NUMBER,
                 defaultValue: "1"
               },
-              2: {
+              two: {
                 type: Scratch.ArgumentType.NUMBER,
                 defaultValue: "2"
+              },
+              EQUATION: {
+                type: Scratch.ArgumentType.STRING,
+                menu: 'equationFields',
+                defaultValue: 'plus'
               },
             }
           },
           { blockType: Scratch.BlockType.LABEL, text: "More Equations" },
-      ]
+      ],
+            menus: {
+        equationFields: [
+          {text: '+', value: 'plus'},
+          {text: '-', value: 'minus'},
+          {text: '×', value: 'times'},
+          {text: '÷', value: 'divide'},
+        ]
+      }
     };
   }
 
   normalEquation() {
-    return args.STR;
+    let first = args.one
+    let second = args.two
+    if (args.EQUATION = "plus") {return (first + second)}
+    if (args.EQUATION = "minus") {return (first - second)}
+    if (args.EQUATION = "times") {return (first * second)}
+    if (args.EQUATION = "divide") {return (first / second)}
   }
 }
 
