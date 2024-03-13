@@ -1,0 +1,41 @@
+/*
+  Created by mariocraft987 <scratch.mit.edu/users/mariocraft987>
+  Licensed under the @MIT License
+  Version 0.5
+*/
+(function(Scratch) {
+class superEquations {
+  getInfo() {
+    return {
+      id: 'thesuperequationsidk',
+      name: 'Super Equations',
+      color1: '#8c2eff',
+      blocks: [
+          {
+            opcode: 'normalEquation',
+            blockType: Scratch.BlockType.REPORTER,
+            text: '[1] [EQUATION] [2]',
+            disableMonitor: true,
+            arguments: {
+              1: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: "1"
+              },
+              2: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: "2"
+              },
+            }
+          },
+          { blockType: Scratch.BlockType.LABEL, text: "More Equations" },
+      ]
+    };
+  }
+
+  normalEquation() {
+    return args.STR;
+  }
+}
+
+Scratch.extensions.register(new superEquations());
+})(Scratch);
