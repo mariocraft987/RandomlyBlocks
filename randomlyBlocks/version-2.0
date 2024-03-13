@@ -156,7 +156,8 @@ Created by Mariocraft987 <scratch.mit.edu/users/mariocraft987>
     }
 
     changeUrl(args) {
-      if (confirm("https://studio.penguinmod.com wants to redirect you to "+args.STR) == true) {
+      let link = args.STR
+      if (confirm("Randomly blocks wants to redirect you to "+link) == true) {
         location.href = args.STR;
       }
     }
