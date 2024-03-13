@@ -4,7 +4,7 @@
   Version 0.8
 */
 
-(function(Scratch) {
+(async function(Scratch) {
   "use strict";
   class superEquations {
     getInfo() {
@@ -77,6 +77,19 @@
               },
             }
           },
+          {
+          opcode: 'backwardBoolean',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[STR] reversed',
+          disableMonitor: true,
+          arguments: {
+            STR: {
+                type: Scratch.ArgumentType.BOOLEAN,
+                defaultValue: "true"
+            },
+          }
+        },
+        
       ],
             menus: {
         equationFields: [
@@ -92,8 +105,7 @@
         ],
         booleanSecondFields: [
           {text: '=', value: 'equal1'},
-          {text: '==', value: 'equal2'},
-          {text: '===', value: 'equal3'},
+          {text: '===', value: 'equal2'},
           {text: '!=', value: 'equal0'},
           {text: '<', value: 'less'},
           {text: '>', value: 'more'},
@@ -118,16 +130,21 @@
     if (args.EQUATION == "and") {return (first && second)}
     if (args.EQUATION == "or") {return (first || second)}
   }
+  
     booleanSecondEquation(args) {
     let first = args.one
     let second = args.two
-    if (args.EQUATION == "equal1") {return (first = second)}
-    if (args.EQUATION == "equal2") {return (first == second)}
-    if (args.EQUATION == "equal3") {return (first === second)}
+    if (args.EQUATION == "equal1") {return (first == second)}
+    if (args.EQUATION == "equal2") {return (first === second)}
     if (args.EQUATION == "equal0") {return (first != second)}
     if (args.EQUATION == "less") {return (first < second)}
     if (args.EQUATION == "more") {return (first > second)}
   }
+  
+  backwardBoolean(args) {
+      return (args.STR == false)
+  }
+  
 }
 
 Scratch.extensions.register(new superEquations());
