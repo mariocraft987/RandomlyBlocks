@@ -34,7 +34,49 @@
               },
             }
           },
-          { blockType: Scratch.BlockType.LABEL, text: "More Equations" },
+          { blockType: Scratch.BlockType.LABEL, text: "Booleans" },
+          {
+            opcode: 'booleanSecondEquation',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: '[one] [EQUATION] [two] ?',
+            disableMonitor: true,
+            arguments: {
+              one: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: "2"
+              },
+              two: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: "5"
+              },
+              EQUATION: {
+                type: Scratch.ArgumentType.STRING,
+                menu: 'booleanSecondFields',
+                defaultValue: 'equal1'
+              },
+            }
+          },
+          {
+            opcode: 'booleanEquation',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: '[one] [EQUATION] [two] ?',
+            disableMonitor: true,
+            arguments: {
+              one: {
+                type: Scratch.ArgumentType.BOOLEAN,
+                defaultValue: ""
+              },
+              two: {
+                type: Scratch.ArgumentType.BOOLEAN,
+                defaultValue: ""
+              },
+              EQUATION: {
+                type: Scratch.ArgumentType.STRING,
+                menu: 'booleanFields',
+                defaultValue: 'and'
+              },
+            }
+          },
       ],
             menus: {
         equationFields: [
@@ -42,7 +84,20 @@
           {text: '-', value: 'minus'},
           {text: '×', value: 'times'},
           {text: '÷', value: 'divide'},
-        ]
+          {text: '%', value: 'remainder'},
+        ],
+        booleanFields: [
+          {text: 'and', value: 'and'},
+          {text: 'or', value: 'or'},
+        ],
+        booleanSecondFields: [
+          {text: '=', value: 'equal1'},
+          {text: '==', value: 'equal2'},
+          {text: '===', value: 'equal3'},
+          {text: '!=', value: 'equal0'},
+          {text: '<', value: 'less'},
+          {text: '>', value: 'more'},
+        ],
       }
     };
   }
@@ -54,6 +109,24 @@
     if (args.EQUATION == "minus") {return (first - second)}
     if (args.EQUATION == "times") {return (first * second)}
     if (args.EQUATION == "divide") {return (first / second)}
+    if (args.EQUATION == "remainder") {return (first % second)}
+  }
+  
+  booleanEquation(args) {
+    let first = args.one
+    let second = args.two
+    if (args.EQUATION == "and") {return (first && second)}
+    if (args.EQUATION == "or") {return (first || second)}
+  }
+    booleanSecondEquation(args) {
+    let first = args.one
+    let second = args.two
+    if (args.EQUATION == "equal1") {return (first = second)}
+    if (args.EQUATION == "equal2") {return (first == second)}
+    if (args.EQUATION == "equal3") {return (first === second)}
+    if (args.EQUATION == "equal0") {return (first != second)}
+    if (args.EQUATION == "less") {return (first < second)}
+    if (args.EQUATION == "more") {return (first > second)}
   }
 }
 
