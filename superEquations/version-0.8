@@ -34,6 +34,12 @@
               },
             }
           },
+          {
+          opcode: 'pi',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'π',
+          disableMonitor: true,
+        },
           { blockType: Scratch.BlockType.LABEL, text: "Booleans" },
           {
             opcode: 'booleanSecondEquation',
@@ -143,6 +149,9 @@
   
   backwardBoolean(args) {
       return (args.STR == false)
+  }
+  pi(args) {
+    return Math.PI
   }
   
 }
