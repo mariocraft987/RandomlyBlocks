@@ -10,8 +10,8 @@
     getInfo() {
      return {
       id: 'thesuperequationsidk',
-      name: 'Super Equations',
-      color1: '#8c2eff',
+      name: 'Operators Equations',
+      color1: '#59c059',
       blocks: [
           {
             opcode: 'normalEquation',
