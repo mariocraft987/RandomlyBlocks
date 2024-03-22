@@ -122,25 +122,25 @@ Created by Mariocraft987 <scratch.mit.edu/users/mariocraft987>
           {
             opcode: 'getDate',
             blockType: Scratch.BlockType.REPORTER,
-            text: 'get Date',
+            text: 'Get Date',
             disableMonitor: true,
           },
           {
             opcode: 'getMilisecs',
             blockType: Scratch.BlockType.REPORTER,
-            text: 'get Miliseconds',
+            text: 'Get Miliseconds',
             disableMonitor: true,
           },
           {
             opcode: 'getTime1970',
             blockType: Scratch.BlockType.REPORTER,
-            text: 'get Miliseconds since 1970',
+            text: 'Get Miliseconds since 1970',
             disableMonitor: true,
           },
           {
             opcode: 'currentHolliday',
             blockType: Scratch.BlockType.REPORTER,
-            text: 'current holliday',
+            text: 'Current holliday',
             disableMonitor: true, 
           },
             
