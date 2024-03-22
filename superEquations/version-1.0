@@ -1,7 +1,7 @@
 /*
   Created by mariocraft987 <scratch.mit.edu/users/mariocraft987>
   Licensed under the @MIT License
-  Version 0.8
+  Version 1.0
 */
 
 (async function(Scratch) {
