@@ -264,7 +264,7 @@ Created by Mariocraft987 <scratch.mit.edu/users/mariocraft987>
             }else
             if (month == 11) {
                 if (day == 25) {return "christmas"}
-                if (day == 31) {return "new years eve"}
+                if (day == 31) {return "new year eve"}
             }
             return "No Importent Hollidays Today!"
         }
