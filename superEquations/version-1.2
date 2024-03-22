@@ -1,0 +1,101 @@
+/*
+  Created by mariocraft987 <scratch.mit.edu/users/mariocraft987>
+  Licensed under the @MIT License
+  Version 1.2
+*/
+
+(async function(Scratch) {
+  "use strict";
+  class extraEquations {
+    getInfo() {
+     return {
+      id: 'thesuperequationsidk',
+      name: 'Extra Equations',
+      color1: '#5f4bfa',
+      blocks: [
+          {
+            opcode: 'normalEquation',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'Sum of [one] [EQUATION] [two]',
+            disableMonitor: true,
+            arguments: {
+              one: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: "1"
+              },
+              two: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: "2"
+              },
+              EQUATION: {
+                type: Scratch.ArgumentType.STRING,
+                menu: 'equationFields',
+                defaultValue: 'plus'
+              },
+            }
+          },
+          { blockType: Scratch.BlockType.LABEL, text: "Booleans" },
+          {
+          opcode: 'backwardBoolean',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[STR] reversed',
+          disableMonitor: true,
+          arguments: {
+            STR: {
+                type: Scratch.ArgumentType.BOOLEAN,
+                defaultValue: "true"
+            },
+          }
+        },
+        
+      ],
+            menus: {
+        equationFields: [
+          {text: '+', value: 'plus'},
+          {text: '-', value: 'minus'},
+          {text: '×', value: 'times'},
+          {text: '÷', value: 'divide'},
+          {text: '%', value: 'remainder'},
+        ]
+      }
+    };
+  }
+
+  normalEquation(args) {
+    let first = args.one
+    let second = args.two
+    if (args.EQUATION == "plus") {return (first + second)}
+    if (args.EQUATION == "minus") {return (first - second)}
+    if (args.EQUATION == "times") {return (first * second)}
+    if (args.EQUATION == "divide") {return (first / second)}
+    if (args.EQUATION == "remainder") {return (first % second)}
+  }
+  
+  booleanEquation(args) {
+    let first = args.one
+    let second = args.two
+    if (args.EQUATION == "and") {return (first && second)}
+    if (args.EQUATION == "or") {return (first || second)}
+  }
+  
+    booleanSecondEquation(args) {
+    let first = args.one
+    let second = args.two
+    if (args.EQUATION == "equal1") {return (first == second)}
+    if (args.EQUATION == "equal2") {return (first === second)}
+    if (args.EQUATION == "equal0") {return (first != second)}
+    if (args.EQUATION == "less") {return (first < second)}
+    if (args.EQUATION == "more") {return (first > second)}
+  }
+  
+  backwardBoolean(args) {
+      return (args.STR == false)
+  }
+  pi(args) {
+    return Math.PI
+  }
+  
+}
+
+Scratch.extensions.register(new extraEquations());
+})(Scratch);
