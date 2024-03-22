@@ -6,12 +6,12 @@
 
 (async function(Scratch) {
   "use strict";
-  class superEquations {
+  class extraEquations {
     getInfo() {
      return {
       id: 'thesuperequationsidk',
-      name: 'Operators Equations',
-      color1: '#59c059',
+      name: 'Extra Equations',
+      color1: '#5f4bfa',
       blocks: [
           {
             opcode: 'normalEquation',
@@ -97,5 +97,5 @@
   
 }
 
-Scratch.extensions.register(new superEquations());
+Scratch.extensions.register(new extraEquations());
 })(Scratch);
