@@ -15,7 +15,7 @@ Created by Mariocraft987 <scratch.mit.edu/users/mariocraft987>
         color2: '#1ee894',
         blocks: [
           {
-            opcode: 'alertName',
+            opcode: 'alertname',
             blockType: Scratch.BlockType.COMMAND,
             text: 'Alert [STR]',
             disableMonitor: true,
@@ -147,10 +147,10 @@ Created by Mariocraft987 <scratch.mit.edu/users/mariocraft987>
         ],
       };
     }
-    alertName(args) {
+    alertname(args) {
       alert(args.STR)
     }    
-      // Old Block Test
+    // Old Block Test
     YNalert(args) {
       return("hello!")
     }
@@ -159,6 +159,10 @@ Created by Mariocraft987 <scratch.mit.edu/users/mariocraft987>
       document.title = args.STR
     }
 
+    /* 
+      Wrong use with the redirect block can lead to major adult websites, so it is intended to ask for
+      permission for the directed URL.
+    */
     changeUrl(args) {
       let link = args.STR
       let bot = args.bot
