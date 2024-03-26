@@ -6,11 +6,11 @@
 
 (async function(Scratch) {
   "use strict";
-  class extraEquations {
+  class extraLogic {
     getInfo() {
      return {
       id: 'thesuperequationsidk',
-      name: 'Extra Equations',
+      name: 'Extra Logic',
       color1: '#5f4bfa',
       blocks: [
           /*
@@ -36,6 +36,18 @@
             }
           }, 
           */
+          {
+          opcode: 'getTitle',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Title',
+          disableMonitor: true,
+          },
+          {
+          opcode: 'getUrl',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Url',
+          disableMonitor: true,
+          },
           {
           opcode: 'backwardBoolean',
           blockType: Scratch.BlockType.BOOLEAN,
@@ -92,11 +104,14 @@
   backwardBoolean(args) {
       return (args.STR == false)
   }
-  pi(args) {
-    return Math.PI
+  getTitle(args) {
+      return document.title
+  }
+  getUrl(args) {
+      return document.URL
   }
   
 }
 
-Scratch.extensions.register(new extraEquations());
+Scratch.extensions.register(new extraLogic());
 })(Scratch);
