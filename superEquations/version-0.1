@@ -1,7 +1,7 @@
 /*
   Created by mariocraft987 <scratch.mit.edu/users/mariocraft987>
   Licensed under the @MIT License
-  Version 1.2
+  Version 0.1
 */
 
 (async function(Scratch) {
@@ -37,18 +37,6 @@
           }, 
           */
           {
-          opcode: 'getTitle',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'Title',
-          disableMonitor: true,
-          },
-          {
-          opcode: 'getUrl',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'Url',
-          disableMonitor: true,
-          },
-          {
           opcode: 'backwardBoolean',
           blockType: Scratch.BlockType.BOOLEAN,
           text: '[STR] reversed',
@@ -57,6 +45,75 @@
             STR: {
                 type: Scratch.ArgumentType.BOOLEAN,
                 defaultValue: "true"
+            },
+          }
+        },
+        {
+          opcode: 'includes',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[word] includes [STR]?',
+          disableMonitor: true,
+          arguments: {
+            word: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: "dog cat penguin"
+            },
+            STR: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: "penguin"
+            },
+          }
+        },
+        "---",
+        {
+          opcode: 'replace',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'replace [target] in [word] with [replacement]',
+          disableMonitor: true,
+          arguments: {
+            word: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: "Everyone is nice!"
+            },
+            target: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: "nice"
+            },
+            replacement: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: "super cool"
+            },
+          }
+        },
+        {
+          opcode: 'replaceAll',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'replace all [target] in [word] with [replacement]',
+          disableMonitor: true,
+          arguments: {
+            word: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: "Everyone is nice!"
+            },
+            target: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: "nice"
+            },
+            replacement: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: "super cool"
+            },
+          }
+        },
+        {
+          opcode: 'trim',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Trim [STR]',
+          disableMonitor: true,
+          arguments: {
+            STR: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: " Hello "
             },
           }
         },
@@ -102,13 +159,25 @@
   }
   
   backwardBoolean(args) {
-      return (args.STR == false)
+      return (args.STR == false);
   }
   getTitle(args) {
-      return document.title
+      return document.title;
   }
   getUrl(args) {
-      return document.URL
+      return document.URL;
+  }
+  includes(args) {
+      return args.word.includes(args.STR);
+  }
+  replace(args) {
+      return args.word.replace(args.target, args.replacement)
+  }
+  replaceAll(args) {
+      return args.word.replaceAll(args.target, args.replacement)
+  }
+  trim(args) {
+      return args.STR.trim()
   }
   
 }
