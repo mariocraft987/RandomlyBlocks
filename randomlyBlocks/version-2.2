@@ -1,6 +1,6 @@
 /*
 Under @MIT LICENSE
-Version 2.2.1
+Version 2.2.3
 Created by Mariocraft987 <scratch.mit.edu/users/mariocraft987>
 */
 
@@ -243,34 +243,34 @@ Created by Mariocraft987 <scratch.mit.edu/users/mariocraft987>
         let month = date.getMonth()
         let day = date.getDate()
             if (month == 0) {
-                if (day == 1) {return "new year"}
-                if (day == 15) {return "martin luther king"}
+                if (day == 1) {return "new_year"}
+                if (day == 15) {return "martin_luther_king"}
             }else
             if (month == 1) {
-                if (day == 2) {return "groundhogs day"}
-                if (day == 19) {return "presidents day"}
+                if (day == 2) {return "groundhogs_day"}
+                if (day == 19) {return "presidents_day"}
             }else
             if (month == 2) {
                 if (day == 31) {return "easter"}
             }else
             if (month == 3) {
-                if (day == 15) {return "tax day"}
+                if (day == 15) {return "tax_day"}
             }else
             if (month == 4) {
-                if (day == 12) {return "mothers day"}
+                if (day == 12) {return "mothers_day"}
             }else
             if (month == 5) {
-                if (day == 16) {return "fathers day"}
+                if (day == 16) {return "fathers_day"}
             }else
             if (month == 6) {
-                if (day == 4) {return "independence day"}
-                if (day == 28) {return "parents day"}
+                if (day == 4) {return "independence_day"}
+                if (day == 28) {return "parents_day"}
             }else
             if (month == 7) {
                 /* Nothing much */
             }else
             if (month == 8) {
-                if (day == 2) {return "labor day"}
+                if (day == 2) {return "labor_day"}
             }else
             if (month == 9) {
                 if (day == 31) {return "halloween"}
@@ -280,9 +280,9 @@ Created by Mariocraft987 <scratch.mit.edu/users/mariocraft987>
             }else
             if (month == 11) {
                 if (day == 25) {return "christmas"}
-                if (day == 31) {return "new year eve"}
+                if (day == 31) {return "new_year_eve"}
             }
-            return "No Importent Hollidays Today!"
+            return "none"
         }
         throwError(args) {
           throw new Error(args.STR)
