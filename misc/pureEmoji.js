@@ -55,18 +55,13 @@
                 defaultValue: "🙂"
               },
             }
-          },
+          },           
           {
-            opcode: 'rating',
+            opcode: "square",
             blockType: Scratch.BlockType.REPORTER,
-            text: 'Movie rating of word [STR]',
+            blockShape: Scratch.BlockShape.SQUARE,
+            text: "useless square",
             disableMonitor: true,
-            arguments: {
-              STR: {
-                type: Scratch.ArgumentType.STRING,
-                defaultValue: "Killer Sharks"
-              },
-            }
           },
            "---",
           {
@@ -115,15 +110,10 @@
        .replaceAll("😂", "lol")
        .replaceAll("🤣", "rofl")
     }
-     rating(args) {
-        let w = args.STR.toLowerCase();
-        if (w.includes("murder")||w.includes("kill")||w.includes("sex")||w.includes("fuck")){ return "R" } else
-        if (w.includes("doll")||w.includes("creepy")||w.includes("love")||w.includes("damn")){ return "PG-13" } else
-        if (w.includes("scary")||w.includes("hate")||w.includes("crap")||w.includes("shit")){ return "TV-MA" } else
-        if (w.includes("fun")||w.includes("adventure")){ return "TV-Y7" } else
-        { return "PG"}
-     }
-      
+   square() {
+      throw new Error("'Scratch.BlockShape.>>SQUARE<<' is not defined");
    }
+
+  }
   Scratch.extensions.register(new PureEmoji())
 })(Scratch);
