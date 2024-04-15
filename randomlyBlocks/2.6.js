@@ -89,6 +89,7 @@ Created by Mariocraft987 (scratch.mit.edu/users/mariocraft987)
             blockType: Scratch.BlockType.BOOLEAN,
             text: 'Do Dinosoars still exist?',
             disableMonitor: true,
+            hideFromPalette: true,
           },
           {
             opcode: 'randomBoolean',
@@ -148,14 +149,13 @@ Created by Mariocraft987 (scratch.mit.edu/users/mariocraft987)
             text: 'Current holliday',
             disableMonitor: true, 
           },
-          /*
           {
             opcode: 'newImg',
             blockType: Scratch.BlockType.REPORTER,
             text: 'Get image URL of file selected',
             disableMonitor: true, 
+            hideFromPalette: true,
           },
-          */
           "---",
           // This button is under devolopment
           {
