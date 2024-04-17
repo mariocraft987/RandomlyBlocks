@@ -1,10 +1,4 @@
-//
-//   This will be uncompleted because its so dumb and simple that pm wouldn't allow it
-//
-
-(async function(Scratch) {
-const variables = {};
-
+(function(Scratch) {
 class Python {
   getInfo() {
     return {
@@ -12,44 +6,10 @@ class Python {
       name: 'Python',
       blocks: [
         {
-          opcode: 'print',
-          blockType: Scratch.BlockType.COMMAND,
-          text: 'print [TEXT]',
-          disableMonitor: true,
-          arguments: {
-            TEXT: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'Hello, World!'
-            },
-          }
-        },
-        {
-          opcode: 'input',
-          blockType: Scratch.BlockType.COMMAND,
-          text: '[VAR] = input [TEXT]',
-          disableMonitor: true,
-          arguments: {
-            TEXT: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'How many hearts will you need?'
-            },
-            VAR: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'health'
-            },
-          }
-        },
-        {
-          opcode: 'getinput',
+          opcode: 'undefined',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'get last input [VAR]',
+          text: 'Undefined',
           disableMonitor: true,
-          arguments: {
-            VAR: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'health'
-            },
-          }
         },
       ],
       menus: {
@@ -60,18 +20,8 @@ class Python {
       }
     };
   }
-  print(args) {
-    alert(args.TEXT)
-  }
-  input(args) {
-    variables[args.VAR] = prompt(args.TEXT, "")
-  }
-  getinput(args) {
-    if (!args.VAR) {
-      return "null"
-    }else{
-    return variables[args.VAR];
-    }
+  undefined(args) {
+    return "NaN"
   }
 }
 Scratch.extensions.register(new Python());
