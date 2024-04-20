@@ -200,10 +200,7 @@ Created by Mariocraft987 (scratch.mit.edu/users/mariocraft987)
       let bot = args.bot
       if (confirm(bot+" wants to redirect you to "+link) == true) {
         if (args.NEWTAB == "new") {
-          window.open(
-            args.STR,
-            '_blank'
-          );
+          window.open(args.STR, '_blank');
         }else{
           location.href = args.STR;
         }
