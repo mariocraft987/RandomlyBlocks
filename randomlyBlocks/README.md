@@ -6,7 +6,7 @@ My first submitted [PenguinMod](https://penguinmod.com) extensions called Random
 <img src="https://github.com/mariocraft987/RandomlyBlocks/assets/154646419/c55768de-42e7-42eb-938a-1b0335602ade" width="330">
 <br/>
 Version 2.0<br/>
-Last updated March 12, 2024
+Last updated May 3, 2024
 ### OLD VERSION
 |Block        |result|
 |--------------|------|
@@ -15,10 +15,10 @@ Last updated March 12, 2024
 |`Redirect user to [url]`|Redirects the user to the url input|
 |`Add [Penguin] to console log`|Adds a string to the console log|
 |`Add [Banana] to console error`|Adds a string to the error log|
-|`<True?>`|Returns true|
-|`<Do Dinosoars exist?>`|Returns if the dinosoars still exists|
+|`<Random output>`|Returns a random output|
 |`<"Ok" button pressed on alert [popup]?>`|Sends an alert with a Ok/Cancel and returns is "Ok" is pressed|
 |`(Input of [What's your username?] with the default of [mariocraft987])`|Sends an alert with an input and returns the user's input|
+|`<Is not words or numbers [   ]>`|Returns if the string is a bunch of spaces|
 |`(get Date)`|Returns the javascript "new Date"|
 |`(Get Milliseconds)`|Returns the current millisecond|
 |`(Get Millseconds since 1970)`|Gets all the milliseconds since the year 1970|
