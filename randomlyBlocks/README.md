@@ -7,7 +7,7 @@ My first submitted [PenguinMod](https://penguinmod.com) extensions called Random
 <br/>
 Version 2.7<br/>
 Last updated May 3, 2024
-### OLD VERSION
+### 2.7 VERSION
 |Block        |result|
 |--------------|------|
 |`Alert [Hello, World]`|Alerts the user|
